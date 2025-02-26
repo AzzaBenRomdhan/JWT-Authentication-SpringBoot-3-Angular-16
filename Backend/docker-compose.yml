@@ -20,25 +20,18 @@ services:
     ports:
       - 1080:1080
       - 1025:1025
-  auth-api:
-    container_name: auth-api
-    image: auth/auth:0.0.5-SNAPSHOT
+  keycloak:
+    container_name: keycloak-auth
+    image: quay.io/keycloak/keycloak:24.0.2
     ports:
-      - 8088:8088
+      - 9090:8080
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
     networks:
       - spring-demo
-    depends_on:
-      - postgres
-  auth-ui:
-    container_name: auth-ui
-    image: auth/auth-ui:1.0.0
-    ports:
-      - 8080:80
-    networks:
-      - spring-demo
-    depends_on:
-      - auth-api
-
+    command:
+      - "start-dev"
 networks:
   spring-demo:
     driver: bridge
