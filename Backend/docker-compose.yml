@@ -1,0 +1,48 @@
+services:
+  postgres:
+    container_name: postgres-sql-auth
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Admin
+      PGDATA: /var/lib/postgresql/data
+      POSTGRES_DB: authentication
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - 5432:5432
+    networks:
+      - spring-demo
+    restart: unless-stopped
+  mail-dev:
+    container_name: mail-dev-auth
+    image: maildev/maildev
+    ports:
+      - 1080:1080
+      - 1025:1025
+  auth-api:
+    container_name: auth-api
+    image: auth/auth:0.0.5-SNAPSHOT
+    ports:
+      - 8088:8088
+    networks:
+      - spring-demo
+    depends_on:
+      - postgres
+  auth-ui:
+    container_name: auth-ui
+    image: auth/auth-ui:1.0.0
+    ports:
+      - 8080:80
+    networks:
+      - spring-demo
+    depends_on:
+      - auth-api
+
+networks:
+  spring-demo:
+    driver: bridge
+
+volumes:
+  postgres:
+    driver: local
