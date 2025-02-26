@@ -17,7 +17,7 @@ public class JwtAuthenticationApplication {
     public static void main(String[] args) {
         SpringApplication.run(JwtAuthenticationApplication.class, args);
     }
-    @Bean
+    /*@Bean
     public CommandLineRunner runner(RoleRepository roleRepository){
         return args -> {
             if (roleRepository.findByName("USER").isEmpty()){
@@ -26,5 +26,5 @@ public class JwtAuthenticationApplication {
                 );
             }
         };
-    }
+    }*/
 }

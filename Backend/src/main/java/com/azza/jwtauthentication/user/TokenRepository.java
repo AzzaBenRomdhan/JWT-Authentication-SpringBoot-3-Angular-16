@@ -6,8 +6,8 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 import java.util.Optional;
 
-public interface TokenRepository extends JpaRepository<Token, Integer> {
-    Optional<Token> findByToken(String token);
+public interface TokenRepository {// extends JpaRepository<Token, Integer> {
+    /*Optional<Token> findByToken(String token);
     @Query("SELECT t FROM Token t")
-    List<Token> findAllTokens();
+    List<Token> findAllTokens();*/
 }
