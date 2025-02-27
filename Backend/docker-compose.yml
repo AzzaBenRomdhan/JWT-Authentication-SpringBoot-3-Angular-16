@@ -28,6 +28,12 @@ services:
     environment:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
+      KEYCLOAK_SMTP_HOST: smtp.gmail.com
+      KEYCLOAK_SMTP_PORT: 465
+      KEYCLOAK_SMTP_USER: "celina.celine999@gmail.com"
+      KEYCLOAK_SMTP_PASSWORD: "pcnpyxvwembigxwb"
+      KEYCLOAK_SMTP_FROM: "benromdhan.azza99@gmail.com"
+      KEYCLOAK_SMTP_TLS: "true"
     networks:
       - spring-demo
     command:
