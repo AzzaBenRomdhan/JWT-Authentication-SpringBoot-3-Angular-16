@@ -1,61 +1,55 @@
 <app-menu></app-menu>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- Migration Section -->
 <section class="container pt-3 mb-3">
-  <h2 class="h3 block-title text-center">What we do<small>Whatever we do, we do with your end user in mind </small></h2>
+  <h2 class="h3 block-title text-center">Migration from JWT to Keycloak <small>Improving Authentication and Security</small></h2>
   <div class="row pt-5 mt-30">
-    <div class="col-lg-4 col-sm-6 mb-30 pb-5">
-      <a class="card" href="#">
-        <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-user fa-3x head-icon"></i></div>
-        <div class="card-body text-center">
-          <h3 class="card-title pt-1">UX Prototyping</h3>
-          <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p><span class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i class="fe-icon-arrow-right"></i></span>
-        </div>
-      </a>
+    <div class="col-lg-12">
+      <h3 class="card-title pt-1">Why We Migrated from JWT to Keycloak</h3>
+      <p class="card-text text-sm">
+        In the early stages of our project, we implemented JWT (JSON Web Token) as the solution for user authentication. While JWT provided a simple way to handle authentication, we encountered limitations regarding scalability, user management, and centralized security. As our project grew, we realized the need for a more robust and enterprise-grade identity management solution.
+        This led us to migrate from JWT to Keycloak – a powerful open-source identity and access management solution.
+      </p>
     </div>
-    <div class="col-lg-4 col-sm-6 mb-30 pb-5">
-      <a class="card" href="#">
-        <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-user-circle-o fa-3x head-icon"></i></div>
-        <div class="card-body text-center">
-          <h3 class="card-title pt-1">Web &amp; UI Design</h3>
-          <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p><span class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i class="fe-icon-arrow-right"></i></span>
-        </div>
-      </a>
+    <div class="col-lg-6">
+      <h3 class="card-title pt-1">Challenges Faced During the Migration</h3>
+      <ul class="list-group">
+        <li class="list-group-item">Integration complexity with existing JWT-based authentication.</li>
+        <li class="list-group-item">Ensuring minimal disruption to the user experience during the migration.</li>
+        <li class="list-group-item">Setting up Keycloak and configuring it to handle roles, permissions, and users correctly.</li>
+        <li class="list-group-item">Training the development team to use Keycloak's rich features effectively.</li>
+      </ul>
     </div>
-    <div class="col-lg-4 col-sm-6 mb-30 pb-5">
-      <a class="card" href="#">
-        <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-address-book fa-3x head-icon"></i></div>
-        <div class="card-body text-center">
-          <h3 class="card-title pt-1">Front-End Development</h3>
-          <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p><span class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i class="fe-icon-arrow-right"></i></span>
-        </div>
-      </a>
+    <div class="col-lg-6">
+      <h3 class="card-title pt-1">Benefits of Keycloak</h3>
+      <ul class="list-group">
+        <li class="list-group-item">Centralized identity and user management, making user authentication more streamlined.</li>
+        <li class="list-group-item">Built-in support for OAuth2, OpenID Connect, and SAML protocols, ensuring better interoperability with other systems.</li>
+        <li class="list-group-item">Improved scalability for handling user sessions and authentication tokens.</li>
+        <li class="list-group-item">Enhanced security with features such as multi-factor authentication (MFA), password policies, and account lockouts.</li>
+        <li class="list-group-item">Simplified role and permission management for fine-grained access control.</li>
+      </ul>
     </div>
-    <div class="col-lg-4 col-sm-6 mb-30 pb-5">
-      <a class="card" href="#">
-        <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-car fa-3x head-icon"></i></div>
-        <div class="card-body text-center">
-          <h3 class="card-title pt-1">Back-End Development</h3>
-          <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p><span class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i class="fe-icon-arrow-right"></i></span>
-        </div>
-      </a>
+  </div>
+</section>
+
+<!-- Project Goals & Impact -->
+<section class="container pt-3 mb-3">
+  <h2 class="h3 block-title text-center">Project Goals & Impact</h2>
+  <p class="text-center">Our goal is to revolutionize the property management system by providing innovative solutions that enhance efficiency and ease of use for all stakeholders.</p>
+  <div class="row pt-5 mt-30">
+    <div class="col-lg-6">
+      <h3 class="card-title pt-1">Our Vision</h3>
+      <p class="card-text text-sm">
+        We envision a system that not only simplifies property management but also empowers brokers, agents, and clients with real-time access to relevant data and tools. Our platform will help optimize workflows, reduce overhead, and increase profitability for all parties involved.
+      </p>
     </div>
-    <div class="col-lg-4 col-sm-6 mb-30 pb-5">
-      <a class="card" href="#">
-        <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-camera fa-3x head-icon"></i></div>
-        <div class="card-body text-center">
-          <h3 class="card-title pt-1">Usability Testing</h3>
-          <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p><span class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i class="fe-icon-arrow-right"></i></span>
-        </div>
-      </a>
-    </div>
-    <div class="col-lg-4 col-sm-6 mb-30 pb-5">
-      <a class="card" href="#">
-        <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-image fa-3x head-icon"></i></div>
-        <div class="card-body text-center">
-          <h3 class="card-title pt-1">SEO Optimization</h3>
-          <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p><span class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i class="fe-icon-arrow-right"></i></span>
-        </div>
-      </a>
+    <div class="col-lg-6">
+      <h3 class="card-title pt-1">Future Enhancements</h3>
+      <p class="card-text text-sm">
+        We are constantly working on future enhancements, including the integration of AI for property predictions, improved user interfaces, and expanded market features. The future of property management is here, and we aim to lead the charge.
+      </p>
     </div>
   </div>
 </section>

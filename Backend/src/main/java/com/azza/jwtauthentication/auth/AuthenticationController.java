@@ -7,11 +7,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
-@RequestMapping("auth")
+//@RestController
+//@RequestMapping("auth")
 @Tag(name="Authentication")
 public class AuthenticationController {
-
+/*
     private final AuthenticationService service;
     public AuthenticationController(AuthenticationService service) {
         this.service = service;
@@ -34,4 +34,6 @@ public class AuthenticationController {
     public void confirm (@RequestParam String token) throws MessagingException {
         service.activateAccount(token);
     }
+    */
+
 }
