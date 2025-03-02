@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
+import { UserProfile } from './user-profile';
 import Keycloak from "keycloak-js";
-import {UserProfile} from "./user-profile";
 
 @Injectable({
   providedIn: 'root'
 })
 export class KeycloakService {
-
-  private _keycloak: Keycloak | undefined;
+  private _keycloak: Keycloak.KeycloakInstance | undefined;
   private _profile: UserProfile | undefined;
 
   get keycloak() {
     if (!this._keycloak) {
+      // @ts-ignore
       this._keycloak = new Keycloak({
         url: 'http://localhost:9090',
         realm: 'authentication',
@@ -24,25 +24,28 @@ export class KeycloakService {
   get profile(): UserProfile | undefined {
     return this._profile;
   }
-  constructor() { }
+
+  constructor() {}
 
   async init() {
-    const  authenticated = await this.keycloak.init({
-      enableLogging: true,
-      checkLoginIframe: false,
-      flow: 'standard',
-      onLoad: 'login-required'
-    });
-    if (authenticated) {
-      this._profile = (await this.keycloak.loadUserProfile()) as UserProfile;
-      this._profile.token = this.keycloak.token || '';
+    if (this.keycloak) { // Ensure keycloak is initialized before using it
+      const authenticated = await this.keycloak.init({
+        flow: 'standard',
+        onLoad: 'login-required',
+        checkLoginIframe: false
+      });
+      if (authenticated) {
+        this._profile = (await this.keycloak?.loadUserProfile()) as UserProfile;
+        this._profile.token = this.keycloak?.token || '';
+      }
     }
   }
+
   login() {
-    return this.keycloak.login();
+    return this.keycloak?.login();
   }
 
   logout() {
-    return this.keycloak.logout({redirectUri: 'http://localhost:4200'});
+    return this.keycloak?.logout({ redirectUri: 'http://localhost:4200' });
   }
 }
