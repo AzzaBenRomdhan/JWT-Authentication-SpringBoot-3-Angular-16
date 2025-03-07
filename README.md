@@ -45,9 +45,3 @@ While JWT is a reliable authentication method, managing tokens, user sessions, a
 - Angular CLI (`npm install -g @angular/cli`)  
 - Java (if using Spring Boot or another backend framework)  
 
-### Installation  
-
-1. **Clone the repository**:  
-   ```bash  
-   git clone https://github.com/your-username/AuthFlow-Upgrade.git  
-   cd AuthFlow-Upgrade  
