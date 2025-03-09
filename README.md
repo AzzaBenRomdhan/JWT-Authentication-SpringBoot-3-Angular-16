@@ -33,7 +33,7 @@ While JWT is a reliable authentication method, managing tokens, user sessions, a
 - **OAuth2 & OpenID Connect**: Standard protocols for secure authentication  
 - **JWT**: Previous authentication method (for comparison)  
 - **Docker**: For containerizing Keycloak  
-- **Spring Boot** (or your backend framework): Backend integration  
+- **Spring Boot** : Backend integration  
 
 ---
 
